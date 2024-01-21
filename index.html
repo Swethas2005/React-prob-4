@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+    <style>
+      html{
+        width: fit-content;
+        height: 200px;
+        margin-left: 500px;
+        margin-top: 250px;
+        background-color:antiquewhite;
+      }
+
+      p{
+        font-size: 25px;
+        font-weight: medium;
+        text-align: center;
+        font-family: popins , sans-serif;
+      }
+
+      button{
+        width: 200px;
+        height: 50px;
+        margin-left: 100px;
+        border: none;
+        border-radius: 15px;
+        font-size: 25px;
+        background-color: rgb(22, 1, 249);
+        color: #fff;
+        font-weight: bold;
+      }
+
+      button:hover{
+        transition: 1s;
+        transform: scale(0.9);
+      }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://www.unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script type="text/babel">
+     // code
+     function MyComponent() {
+        let showAlert = () => {
+          alert('Hello');
+        };
+
+        return (
+          <>
+            <p>React is a JavaScript library</p>
+            <div className="main">
+              <p>Click the below button to alert 'Hello'</p>
+              <button onClick={showAlert}>Alert Hello</button>
+            </div>
+          </>
+        );
+      }
+
+      ReactDOM.render(<MyComponent />, document.getElementById('root'));
+      
+    </script>
+  </body>
+</html>
